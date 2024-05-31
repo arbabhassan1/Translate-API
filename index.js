@@ -35,6 +35,10 @@ app.post("/translate", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.json({ message: "API IS LIVE" });
+});
+
 // Handle 404 errors
 app.use((req, res, next) => {
   res.status(404).json({ error: true, message: "API route not found" });
