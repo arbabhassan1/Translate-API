@@ -36,7 +36,20 @@ app.post("/translate", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.json({ message: "API IS LIVE" });
+  res.send(`
+   <div style="text-align: center; display:flex; margin-top:300px; width:100%;  align-items:center; justify-content: center;   ">
+   <div style="text-align: center;">
+   <h1>API is LIVE</h1>
+   <p>For usage instructions, visit our GitHub repository:</p>
+   <a href="https://github.com/arbabhassan1/Translate-API/">GitHub Repository</a>
+   <br/>
+   <br/>
+   <form action="mailto:21011556-184@uog.edu.pk" method="GET">
+     <button type="submit">Contact Support</button>
+   </form>
+ </div>
+   </div>
+  `);
 });
 
 // Handle 404 errors
