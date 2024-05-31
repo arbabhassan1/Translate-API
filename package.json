@@ -1,16 +1,18 @@
 {
   "name": "translate-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Translate API is a powerful tool designed to translate content into multiple languages seamlessly. It leverages advanced machine learning algorithms to provide accurate and contextually appropriate translations. Ideal for developers looking to integrate multilingual support into their applications, this API supports a wide range of languages and offers features like text translation and real-time translation capabilities. Whether for web, mobile, or desktop applications, the Translate API ensures your content can reach a global audience with ease.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "author": "Arbab Hassan",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "nodemon": "^3.1.2"
+    "nodemon": "^3.1.2",
+    "translate": "^3.0.0"
   }
 }
