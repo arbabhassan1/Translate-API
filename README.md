@@ -15,7 +15,7 @@ To use the Translate API, you can make a POST request using Axios in JavaScript:
 ```javascript
 const axios = require('axios');
 
-const API_URL = 'http://localhost:8686/translate';
+const API_URL = 'https://translate-api-alpha.vercel.app/translate';
 
 const requestData = {
   content: 'Hello, how are you?',
