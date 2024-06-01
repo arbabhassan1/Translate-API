@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 translate.engine = "google";
 app.post("/translate", async (req, res) => {
-  const { content, language } = req.body;
+  const { content, language, base_language = "" } = req.body;
 
   if (!language) {
     return res.status(400).json({
@@ -24,8 +24,10 @@ app.post("/translate", async (req, res) => {
   }
 
   try {
-    const text = await translate(content, { to: language });
-    console.log(text);
+    const text = await translate(content, {
+      from: base_language,
+      to: language,
+    });
     return res.json({
       error: false,
       data: text,
